@@ -247,8 +247,7 @@ const StudentEvents = () => {
               </span>
             </p>
             <p>
-              <strong>Date:</strong> {formatDate(selectedEvent.date)} at
-              {selectedEvent.time.slice(0, 5)}
+              <strong>Date:</strong> {formatDate(selectedEvent.date)} at {selectedEvent.time.slice(0, 5)}
             </p>
             <p>
               <strong>Location:</strong> {selectedEvent.location}

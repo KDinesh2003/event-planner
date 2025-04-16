@@ -1,6 +1,4 @@
-/* styles/Header.module.css */
 /* header.module.css */
-
 .headerContainer {
   display: flex;
   align-items: center;
@@ -23,6 +21,39 @@
   margin-left: 10%;
 }
 
+.buttonsContainer {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  align-items: center; /* Vertically align buttons */
+}
+
+.reminderButton {
+  position: relative;
+  padding: 10px 16px;
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.reminderButton:hover {
+  background-color: #a0144b;
+}
+
+.notificationDot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  background-color: #ff3b3b;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white;
+}
+
 .profileButton {
   padding: 0.6rem 1.2rem;
   background-color: #c2185b;
@@ -32,6 +63,7 @@
   border-radius: 5px;
   font-size: 1rem;
   flex-shrink: 0;
+  margin-right: 10px; /* Space added here */
 }
 
 .profileButton:hover {
@@ -76,6 +108,7 @@
 .closeButton:hover {
   background-color: #9c1e4e;
 }
+
 /* Profile Modal Container */
 .profileModal {
   position: fixed;

@@ -332,3 +332,28 @@ ORDER BY e.date DESC, e.time DESC;
     res.status(500).json({ message: "Server error" });
   }
 };
+
+exports.getReminders = async (req, res) => {
+  const studentId = req.user.studentId; // assuming JWT sets `req.user`
+
+  try {
+    const [events] = await pool.execute(
+      `SELECT 
+         e.id, 
+         e.title, 
+         e.time, 
+         e.location 
+       FROM events e
+       JOIN registrations r ON r.event_id = e.id
+       WHERE r.student_id = ?
+         AND TIMESTAMPDIFF(MINUTE, NOW(), CONCAT(e.date, ' ', e.time)) BETWEEN 0 AND 60
+       ORDER BY e.date ASC, e.time ASC`,
+      [studentId]
+    );
+
+    res.status(200).json({ events });
+  } catch (err) {
+    console.error("Error fetching reminders:", err);
+    res.status(500).json({ error: "Failed to fetch reminders" });
+  }
+};

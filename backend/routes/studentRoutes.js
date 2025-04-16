@@ -14,6 +14,7 @@ const {
   getFilteredEvents,
   getStudentProfile,
   getPastEvents,
+  getReminders
 } = require("../controllers/studentController");
 
 router.post("/cancel", auth, cancelRegistration);
@@ -36,6 +37,7 @@ router.get(
 router.delete("/unregister/:eventId", auth, unregisterEvent);
 router.get("/profile", auth, getStudentProfile);
 router.get("/past-events", auth, getPastEvents);
+router.get("/reminders", auth, getReminders)
 
 
 module.exports = router;
