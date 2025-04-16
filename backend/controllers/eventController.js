@@ -47,12 +47,12 @@ exports.createEvent = async (req, res) => {
       return res.status(400).json({ message: "User ID is missing in the token" });
     }
   
-    const { title, description, date, location, categories } = req.body;
+    const { title, description, date,time, location, categories } = req.body;
     const organizerId = req.user.organizerId;
   
     // 🕒 Get current time in "HH:MM" format
-    const now = new Date();
-    const time = now.toTimeString().split(":").slice(0, 2).join(":"); // e.g., "14:30"
+    // const now = new Date();
+    // const time = now.toTimeString().split(":").slice(0, 2).join(":"); // e.g., "14:30"
   
     try {
       const eventId = await eventModel.insertEvent({

@@ -20,7 +20,7 @@ export default function StudentRegister() {
     try {
       const res = await api.post('/students/register-student', form);
       localStorage.setItem('studentToken', res.data.token);
-      router.push('/pages/student/dashboard');
+      router.push('/pages/auth/student-login');
     } catch (err) {
       alert('Registration failed');
     }

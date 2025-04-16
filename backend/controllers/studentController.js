@@ -298,7 +298,6 @@ exports.getPastEvents = async (req, res) => {
   try {
     const studentId = req.user.studentId;
     console.log(req.user);
-    
 
     const [events] = await pool.execute(
       `
@@ -318,10 +317,13 @@ LEFT JOIN event_categories ec ON e.id = ec.event_id
 LEFT JOIN categories c ON ec.category_id = c.id
 LEFT JOIN registrations r ON e.id = r.event_id AND r.student_id = ?
 WHERE (e.date < CURDATE()) 
-   OR (e.date = CURDATE() AND e.time < CURTIME());
+   OR (e.date = CURDATE() AND e.time < CURTIME())
+ORDER BY e.date DESC, e.time DESC;
 
-`
-   ,[studentId] );
+
+`,
+      [studentId]
+    );
     console.log(events);
 
     res.status(200).json({ events });

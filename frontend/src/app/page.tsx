@@ -82,7 +82,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-sm text-center text-[#777] border-t border-[#e4c6ce] pt-6">
-        © 2025 Campus Events Hub. Built with ❤️ using Next.js.
+        © 2025 Events Hub
       </footer>
     </div>
   );

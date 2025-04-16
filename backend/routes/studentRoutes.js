@@ -33,7 +33,6 @@ router.get(
   auth,
   getFilteredEvents
 );
-
 router.delete("/unregister/:eventId", auth, unregisterEvent);
 router.get("/profile", auth, getStudentProfile);
 router.get("/past-events", auth, getPastEvents);
