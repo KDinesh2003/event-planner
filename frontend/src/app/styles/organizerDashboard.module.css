@@ -1,0 +1,220 @@
+/* styles/businessDashboard.module.css */
+.dashboardContainer {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 2.5rem;
+    background-color: #fff0f5; /* soft pink */
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .header {
+    font-size: 2rem;
+    color: #c2185b;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .statsCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+  
+  .statsCard {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 220px;
+    background: #fefefe;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .statsCardTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statsCardValue {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #667eea;
+  }
+  
+  .tableContainer {
+    margin-top: 1.5rem;
+    overflow-x: auto;
+  }
+  .deleteButton {
+  background-color: #e53935;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c62828;
+}
+
+  
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table th,
+  .table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+  }
+  
+  .table th {
+    background-color: #667eea;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .table td {
+    background-color: #fdfdfd;
+  }
+  
+  .tableRow:hover {
+    background-color: #f0f0ff;
+  }
+  
+  .tableButton {
+    padding: 0.6rem 1.2rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+  }
+  
+  .tableButton:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+  }
+  
+  .logoutButton {
+    align-self: flex-end;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+  }
+  
+  .logoutButton:hover {
+    background: #e03e47;
+    transform: translateY(-1px);
+  }
+  
+  .linkButton {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .linkButton:hover {
+    text-decoration: underline;
+  }
+  .tableContainer.smallTable {
+    max-width: 500px;
+    margin: 2rem auto;
+  }
+  .smallTable {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .emptyMessage {
+    color: #777;
+    font-style: italic;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  /* Maintain the light pink theme for table */
+.table th {
+  background-color: #f8d9e6;  /* Soft light pink */
+  color: #333;  /* Darker text for visibility */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Table row background for better contrast */
+.table td {
+  background-color: #fef9fc;  /* Light off-white pink */
+  color: #333;  /* Dark text for readability */
+}
+
+/* Hover effect for table rows */
+.tableRow:hover {
+  background-color: #f8d9e6;  /* Slightly darker pink on hover */
+}
+
+/* Button color for the table */
+.tableButton {
+  padding: 0.6rem 1.2rem;
+  background: #f8d9e6;  /* Light pink */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.1s ease-in-out;
+}
+
+/* Button hover effect */
+.tableButton:hover {
+  background: #e5a3b3;  /* Slightly darker pink for hover effect */
+  transform: translateY(-2px);
+}
+
+/* Styling the empty message */
+.emptyMessage {
+  color: #777;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Make sure the text inside the table is readable */
+.table td, .table th {
+  font-size: 1rem;  /* Ensure the text is not too small */
+}

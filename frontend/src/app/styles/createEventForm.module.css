@@ -1,0 +1,169 @@
+/* Ensure that the body and html elements support full scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure full height of the page */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  /* The main container for the create event page */
+  .createEventContainer {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 2.5rem;
+    background-color: #fff0f5; /* soft pink */
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Enable scrolling if the content overflows */
+  }
+  
+  /* Form layout with flexbox to ensure spacing between fields */
+  .createEventForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Header for the form */
+  .createEventHeader {
+    font-size: 2rem;
+    color: #c2185b;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  /* Styling each form group to stack the label and input fields */
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .formGroup label {
+    font-size: 1rem;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  /* Focus effect to change the border color when fields are focused */
+  .formGroup input:focus,
+  .formGroup textarea:focus,
+  .formGroup select:focus {
+    border-color: #c2185b;
+  }
+  
+  .formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .formGroup select {
+    cursor: pointer;
+  }
+  
+  /* Button styling for the submit button */
+  .submitButton {
+    padding: 1rem 2rem;
+    background: #c2185b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+    align-self: flex-end;
+  }
+  
+  .submitButton:hover {
+    background: #ff4b5c;
+    transform: translateY(-2px);
+  }
+  
+  /* Button styling for the cancel button */
+  .cancelButton {
+    padding: 1rem 2rem;
+    background: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+  
+  .cancelButton:hover {
+    background: #e03e47;
+    transform: translateY(-2px);
+  }
+  
+  /* Styling for category options */
+  .categoryOption {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .checkbox {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .checkboxLabel {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Empty message when no categories are available */
+  .emptyMessage {
+    color: #777;
+    font-style: italic;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  /* Handling form responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .createEventContainer {
+      padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+  
+    .createEventForm {
+      gap: 1.5rem; /* Reduce gap between form fields */
+    }
+  
+    .formGroup input,
+    .formGroup textarea,
+    .formGroup select {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+  
+    .submitButton,
+    .cancelButton {
+      padding: 0.8rem 1.5rem; /* Adjust button padding for smaller screens */
+      font-size: 1rem;
+    }
+  }
+  
+  .formInput {
+    color: #000
+  }

@@ -1,0 +1,88 @@
+/* styles/businessRegister.module.css */
+.formContainer {
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 2rem;
+    background-color: #fff0f5; /* soft pink */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* ensures text is dark even in dark layouts */
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #c2185b;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .inputField {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ffc1d8;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .inputField::placeholder {
+    color: #aaa;
+  }
+  
+  .inputField:focus {
+    border-color: #c2185b;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(194, 24, 91, 0.15);
+  }
+  
+  .fileInput {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ffc1d8;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  .submitBtn {
+    padding: 0.75rem 1.2rem;
+    background-color: #c2185b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  }
+  
+  .submitBtn:hover {
+    background-color: #a3154d;
+    transform: translateY(-1px);
+  }
+  
+  /* Center the loginLink */
+  .loginLink {
+    display: block; /* Make it a block-level element */
+    text-align: center;
+    color: #c2185b;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%; /* Makes the <a> tag take up the full width of the parent */
+  }
+  
+  .loginLink:hover {
+    text-decoration: underline;
+  }
+  

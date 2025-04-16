@@ -1,0 +1,535 @@
+.shareButton {
+  padding: 0.6rem 1.2rem;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.shareButton:hover {
+  background-color: #135ba1;
+}
+
+/* styles/businessDashboard.module.css */
+.dashboardContainer {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 2.5rem;
+    background-color: #fff0f5; /* soft pink */
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }  
+  .todayEvent {
+  background-color: #e0ffe0; /* Light green background */  
+}  
+
+.todayIndicator {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+  background-color: #e0ffe0; /* Light green background */
+
+}  
+.profileModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}  
+
+.profileContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}  
+
+.closeButton {
+  background: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}  
+
+.closeButton:hover {
+  background: #ff3333;
+}  
+
+.organizerName {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}  
+
+  
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }  
+  
+  .header {
+    font-size: 2rem;
+    color: #c2185b;
+    text-align: center;
+    font-weight: 700;
+  }  
+  
+  .statsCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }  
+  
+  .statsCard {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 220px;
+    background: #fefefe;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }  
+  
+  .statsCardTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }  
+  
+  .statsCardValue {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #667eea;
+  }  
+  
+  .tableContainer {
+    margin-top: 1.5rem;
+    overflow-x: auto;
+  }  
+  
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+  }  
+  
+  .table th,
+  .table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+  }  
+  
+  .table th {
+    background-color: #667eea;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }  
+  
+  .table td {
+    background-color: #fdfdfd;
+  }  
+  
+  .tableRow:hover {
+    background-color: #f0f0ff;
+  }  
+  
+  .tableButton {
+    padding: 0.6rem 1.2rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+  }  
+  
+  .tableButton:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+  }  
+  
+  .logoutButton {
+    align-self: flex-end;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+  }  
+  
+  .logoutButton:hover {
+    background: #e03e47;
+    transform: translateY(-1px);
+  }  
+  
+  .linkButton {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }  
+  
+  .linkButton:hover {
+    text-decoration: underline;
+  }  
+  .tableContainer.smallTable {
+    max-width: 500px;
+    margin: 2rem auto;
+  }  
+  .smallTable {
+    max-width: 500px;
+    margin: 0 auto;
+  }  
+  
+  .emptyMessage {
+    color: #777;
+    font-style: italic;
+    margin-top: 1rem;
+    text-align: center;
+  }  
+  
+  /* styles/studentDashboard.module.css */
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}  
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+  background-color: #f5f5f5; /* Add a background color for better visibility */
+}  
+
+.dashboardContainer {
+  margin-left: 240px; /* Adjust the margin to make space for sidebar */
+}  
+
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #c2185b;
+}  
+
+.tableContainer {
+  margin-top: 2rem;
+  overflow-x: auto;
+}  
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}  
+
+.table th, .table td {
+  padding: 1rem;
+  text-align: left;
+}  
+
+.tableRow:hover {
+  background-color: #f1f1f1;
+}  
+
+.emptyMessage {
+  color: #555;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}  
+/* Maintain the light pink theme for table */
+.table th {
+  background-color: #f8d9e6;  /* Soft light pink */
+  color: #333;  /* Darker text for visibility */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}  
+
+/* Table row background for better contrast */
+.table td {
+  background-color: #fef9fc;  /* Light off-white pink */
+  color: #333;  /* Dark text for readability */
+}  
+
+/* Hover effect for table rows */
+.tableRow:hover {
+  background-color: #f8d9e6;  /* Slightly darker pink on hover */
+}  
+
+/* Button color for the table */
+.tableButton {
+  padding: 0.6rem 1.2rem;
+  background: #f8d9e6;  /* Light pink */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.1s ease-in-out;
+}  
+
+/* Button hover effect */
+.tableButton:hover {
+  background: #e5a3b3;  /* Slightly darker pink for hover effect */
+  transform: translateY(-2px);
+}  
+
+/* Styling the empty message */
+.emptyMessage {
+  color: #777;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+}  
+
+/* Make sure the text inside the table is readable */
+.table td, .table th {
+  font-size: 1rem;  /* Ensure the text is not too small */
+}  
+/* styles/studentDashboard.module.css */
+.eventDetails {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}  
+
+.eventDetails h2 {
+  color: #333;
+}  
+
+.eventDetails p {
+  color: #555;
+}  
+
+.eventDetails button {
+  background-color: #e03e47;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+}  
+
+.eventDetails button:hover {
+  background-color: #c2185b;
+}  
+.cancelBtn {
+  background-color: #c2185b;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}  
+
+.cancelBtn:hover {
+  background-color: #9c1d48;
+}  
+
+/* styles/Header.module.css */
+.headerContainer {
+  background-color: #f5f5f5;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}  
+
+.headerContainer h2 {
+  color: #c2185b; /* Your existing color scheme */
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  margin-left: 530px;
+}  
+/* header.module.css */
+
+.headerContainer {
+display: flex;  
+align-items: center;
+justify-content: space-between;
+padding: 20px;
+}
+
+.profileButton {
+padding: 10px 20px;  
+background-color: #c2185b;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.profileButton:hover {
+background-color: #9c1e4e;  
+}
+
+/* Modal styles */
+.profileModal {
+position: fixed;  
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.profileContent {
+background-color: white;  
+padding: 20px;
+border-radius: 10px;
+width: 300px;
+text-align: left;
+}
+
+.profileContent h3 {
+margin-bottom: 15px;  
+}
+
+.closeButton {
+background-color: #c2185b;  
+color: white;
+padding: 10px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+margin-top: 15px;
+}
+
+.closeButton:hover {
+background-color: #9c1e4e;  
+}
+/* Profile Modal Container */
+.profileModal {
+position: fixed;  
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+/* Profile Modal Content */
+.profileContent {
+background-color: white;  
+border-radius: 8px;
+padding: 20px;
+max-width: 500px;
+width: 90%;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+animation: slideIn 0.3s ease-in-out;
+}
+
+/* Profile Heading */
+.profileContent h3 {
+font-size: 1.8rem;  
+color: #333;
+margin-bottom: 15px;
+text-align: center;
+}
+
+/* Profile Details */
+.profileContent p {
+font-size: 1rem;  
+color: #555;
+margin: 10px 0;
+}
+
+/* Strong Text (labels like ID, Name, etc.) */
+.profileContent p strong {
+font-weight: 600;  
+color: #333;
+}
+
+/* Close Button */
+.closeButton {
+display: block;  
+background-color: #c2185b;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+width: 100%;
+cursor: pointer;
+font-size: 1rem;
+transition: background-color 0.3s ease;
+}
+
+.closeButton:hover {
+background-color: #9c1e4b;  
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+from {
+  opacity: 0;
+  transform: translateY(-50px);
+}  
+to {
+  opacity: 1;
+  transform: translateY(0);
+}  
+}
+
+.organizerName {
+  color: #9c1e4b; /* A blue color that stands out */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px; /* Adjust as needed */
+  text-decoration: none; /* Remove underline by default */
+  padding: 2px 4px; /* Add small padding */
+  border-radius: 4px; /* Slight rounding of the edges for a neat look */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}  
+
+.organizerName:hover {
+  color: #b30051; /* Darker blue when hovered */
+  text-decoration: underline; /* Underline on hover */
+  background-color: rgba(255, 0, 247, 0.1); /* Light blue background on hover */
+}  
+
