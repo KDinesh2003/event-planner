@@ -222,17 +222,18 @@ exports.getFilteredEvents = async (req, res) => {
   try {
     const { category } = req.query;
     console.log("API hit: ", category);
-
     let query = category
       ? `SELECT e.*, c.name AS category_name
-           FROM events e
-           JOIN event_categories ec ON e.id = ec.event_id
-           JOIN categories c ON ec.category_id = c.id
-           WHERE c.id = ?`
+         FROM events e
+         JOIN event_categories ec ON e.id = ec.event_id
+         JOIN categories c ON ec.category_id = c.id
+         WHERE c.id = ?
+           AND (e.date > CURDATE() OR (e.date = CURDATE() AND e.time > CURTIME()))`
       : `SELECT e.*, c.name AS category_name
-           FROM events e
-           JOIN event_categories ec ON e.id = ec.event_id
-           JOIN categories c ON ec.category_id = c.id`;
+         FROM events e
+         JOIN event_categories ec ON e.id = ec.event_id
+         JOIN categories c ON ec.category_id = c.id
+         WHERE (e.date > CURDATE() OR (e.date = CURDATE() AND e.time > CURTIME()))`;
 
     // Add the category to the params array if it's provided
     let params = category ? [category] : [];

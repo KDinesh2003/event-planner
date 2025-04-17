@@ -154,9 +154,7 @@
     background-color: #fdfdfd;
   }  
   
-  .tableRow:hover {
-    background-color: #f0f0ff;
-  }  
+
   
   .tableButton {
     padding: 0.6rem 1.2rem;
@@ -259,9 +257,8 @@
   text-align: left;
 }  
 
-.tableRow:hover {
-  background-color: #f1f1f1;
-}  
+
+
 
 .emptyMessage {
   color: #555;
@@ -284,9 +281,7 @@
 }  
 
 /* Hover effect for table rows */
-.tableRow:hover {
-  background-color: #f8d9e6;  /* Slightly darker pink on hover */
-}  
+/*  */
 
 /* Button color for the table */
 .tableButton {
@@ -532,4 +527,14 @@ to {
   text-decoration: underline; /* Underline on hover */
   background-color: rgba(255, 0, 247, 0.1); /* Light blue background on hover */
 }  
+
+.tableRow {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:hover {
+  background-color: #b30051; /* optional: subtle hover effect */
+}
+
 

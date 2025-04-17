@@ -89,7 +89,7 @@ const StudentHeader = () => {
   return (
     <div className={styles.headerContainer}>
       <h2>Welcome, {studentName || "Student"}!</h2>
-      <div className={styles.buttonContainer}>
+      <div className={styles.buttonContainer}>/
         <button
           className={styles.reminderButton}
           onClick={handleRemindersClick}
